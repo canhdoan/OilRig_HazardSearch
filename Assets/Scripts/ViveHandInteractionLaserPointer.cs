@@ -34,7 +34,7 @@ public class ViveHandInteractionLaserPointer : MonoBehaviour
         {
             if (CheckObjectHit())
             {
-                if (CheckObject())
+                if (CheckForInteractableObject(m_targetObject))
                 {
                     if (CheckInput())
                     {
@@ -85,9 +85,9 @@ public class ViveHandInteractionLaserPointer : MonoBehaviour
 
 
     // ---------- ---------- ---------- ---------- ----------
-    public bool CheckObject()
+    public InteractableObject CheckForInteractableObject(GameObject go)
     {
-        return m_targetObject.GetComponent<InteractableObject>();
+        return go.GetComponent<InteractableObject>();
     }
 
 
