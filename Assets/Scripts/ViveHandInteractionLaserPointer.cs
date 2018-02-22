@@ -30,7 +30,7 @@ public class ViveHandInteractionLaserPointer : MonoBehaviour
     // ---------- ---------- ---------- ---------- ----------
     void Update ()
     {
-        //if (m_controllerConnected)
+        if (m_controllerConnected)
         {
             if (CheckObjectHit())
             {
@@ -134,7 +134,6 @@ public class ViveHandInteractionLaserPointer : MonoBehaviour
     public void UpdateLaser()
     {
         m_lineRenderer.enabled = m_controllerConnected;
-        //m_lineRenderer.endColor = m_controllerConnected ? Color.green : Color.red;
         m_lineRenderer.SetPositions( new Vector3[] {m_hand.transform.position, m_endLinePos});
     }
 
@@ -177,6 +176,7 @@ public class ViveHandInteractionLaserPointer : MonoBehaviour
     }
 
 
+    // ---------- ---------- ---------- ---------- ----------
     public System.Collections.IEnumerator LongInteract(GameObject go)
     {
         yield return new WaitWhile(() => (m_hand.GetStandardInteractionButton()));
@@ -189,6 +189,7 @@ public class ViveHandInteractionLaserPointer : MonoBehaviour
     }
 
 
+    // ---------- ---------- ---------- ---------- ----------
     public System.Collections.IEnumerator OffInteract(GameObject go)
     {
         yield return new WaitWhile(() => (m_hand.GetStandardInteractionButton()));
@@ -197,6 +198,8 @@ public class ViveHandInteractionLaserPointer : MonoBehaviour
             (go.GetInstanceID().ToString() + "->offinteract", new Mouledoux.Callback.Packet());
     }
 
+
+    // ---------- ---------- ---------- ---------- ----------
     public void OnDestroy()
     {
         hasTriggered = false;
