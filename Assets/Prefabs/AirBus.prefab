@@ -1376,6 +1376,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4920366987235138}
+  - component: {fileID: 95662029495964012}
   m_Layer: 0
   m_Name: AirBus
   m_TagString: Untagged
@@ -1461,6 +1462,21 @@ GameObject:
   - component: {fileID: 23560372297058462}
   m_Layer: 0
   m_Name: metalDark_exhaustpipes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1735770918830558
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4054781250977414}
+  m_Layer: 0
+  m_Name: rotor_tail.root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2062,6 +2078,20 @@ Transform:
   m_Father: {fileID: 4437818016672542}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4054781250977414
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1735770918830558}
+  m_LocalRotation: {x: 0.07712278, y: -0.078912824, z: 0.70278645, w: 0.7027917}
+  m_LocalPosition: {x: 7.05637, y: 0.26098865, z: -0.15789801}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4874561730522562}
+  m_Father: {fileID: 4537373570393982}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4063577533301144
 Transform:
   m_ObjectHideFlags: 1
@@ -2571,7 +2601,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1184163494654652}
-  m_LocalRotation: {x: 0.19255206, y: 0.6595188, z: -0.1804242, w: 0.7038507}
+  m_LocalRotation: {x: 0, y: 0.6837515, z: 0, w: 0.729715}
   m_LocalPosition: {x: -0.07474963, y: 0.0000004245043, z: 1.5279126}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2580,7 +2610,7 @@ Transform:
   - {fileID: 4091302739002594}
   m_Father: {fileID: 4537373570393982}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 86.275, z: 0}
 --- !u!4 &4380595635866042
 Transform:
   m_ObjectHideFlags: 1
@@ -2907,7 +2937,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4376581199976370}
-  - {fileID: 4874561730522562}
+  - {fileID: 4054781250977414}
   - {fileID: 4533201841239836}
   - {fileID: 4165423920440016}
   - {fileID: 4873223229855580}
@@ -3430,13 +3460,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1124383271945834}
-  m_LocalRotation: {x: 0.07713355, y: -0.07713411, z: 0.70288455, w: 0.7028898}
-  m_LocalPosition: {x: 7.0563636, y: 0.2609887, z: -0.15789747}
+  m_LocalRotation: {x: -0, y: -0.000000007450577, z: -0.000000013504171, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4398083425776512}
-  m_Father: {fileID: 4537373570393982}
-  m_RootOrder: 1
+  m_Father: {fileID: 4054781250977414}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4888145425716570
 Transform:
@@ -3550,8 +3580,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1683242096367710}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 25.88, y: 46.712, z: 26.6}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_LocalPosition: {x: 13.95, y: 30.7, z: 15.31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4437818016672542}
   m_Father: {fileID: 0}
@@ -6992,3 +7022,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1346664565194328}
   m_Mesh: {fileID: 4300042, guid: 9e281b8cc5682764c88234f31c44790b, type: 3}
+--- !u!95 &95662029495964012
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683242096367710}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7c640d4ff85afa1459fef8cae6b61c56, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
