@@ -94,8 +94,7 @@ public class ViveHandInteractionLaserPointer : MonoBehaviour
     // ---------- ---------- ---------- ---------- ----------
     public bool CheckInput()
     {
-        if (!m_targetObject.GetComponent<InteractableObject>().m_lockedInPlace)
-            m_hand.controller.TriggerHapticPulse();
+        m_hand.controller.TriggerHapticPulse();
         return (m_hand.GetStandardInteractionButtonDown());
     }
 
