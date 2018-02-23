@@ -44,6 +44,7 @@ public class ViveHandInteractionLaserPointer : MonoBehaviour
             }
         }
 
+
         UpdateLaser();
     }
 
