@@ -14,7 +14,7 @@ public class UIUtils : MonoBehaviour
 	void Update ()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-            GoToScene(0);
+            GoToScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
     public void GoToScene(int index)
