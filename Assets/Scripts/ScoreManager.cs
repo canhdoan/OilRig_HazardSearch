@@ -27,7 +27,24 @@ public class ScoreManager : MonoBehaviour
 
 #region Attributes
 
-    public int m_currentScore;
+    private int currentScore;
+
+    public int m_currentScore
+    {
+        get { return currentScore; }
+
+        set
+        {
+            currentScore = value;
+
+            foreach(UnityEngine.UI.Text textBox in m_scoreTextBoxes)
+            {
+                textBox.text = currentScore.ToString();
+            }
+        }
+    }
+
+    public UnityEngine.UI.Text[] m_scoreTextBoxes;
 
  #endregion
 }

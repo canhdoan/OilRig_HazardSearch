@@ -9,7 +9,5 @@ public class HazardObject : InteractableObject
     public void IncreaseScore()
     {
         ScoreManager.instance.m_currentScore += m_scoreValue;
-
-        //Instantiate(Resources.Load("Name"), )
     }
 }
