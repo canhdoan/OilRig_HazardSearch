@@ -16,7 +16,7 @@ public class ViveHandInteractionLaserPointer : MonoBehaviour
 
     private bool m_controllerConnected
     {
-        get { return m_hand.controller.hasTracking; }
+        get { return m_hand.controller != null && m_hand.controller.hasTracking; }
     }
 
     // ---------- ---------- ---------- ---------- ----------
@@ -28,24 +28,46 @@ public class ViveHandInteractionLaserPointer : MonoBehaviour
 
 
     // ---------- ---------- ---------- ---------- ----------
-    void Update ()
+    void Update()
     {
+        #region original lazer
+        //if (m_controllerConnected)
+        //{
+        //    if (CheckObjectHit())
+        //    {
+        //        if (CheckForInteractableObject(m_targetObject))
+        //        {
+        //            if (CheckInput())
+        //            {
+        //                OnObjectInteract();
+        //            }
+        //        }
+        //    }
+        //}
+
+
+        //UpdateLaser();
+        #endregion
+
+
         if (m_controllerConnected)
         {
-            if (CheckObjectHit())
+            if (CheckLongInput())           // We are holding down the trigger
+            {
+                CheckObjectHit();
+            }
+
+            else if (CheckOffInput())   // We have let go of the trigger
             {
                 if (CheckForInteractableObject(m_targetObject))
                 {
-                    if (CheckInput())
-                    {
-                        OnObjectInteract();
-                    }
+                    OnObjectInteract();
                 }
             }
         }
 
-
-        UpdateLaser();
+        bool[] extraLazerConditions = { CheckLongInput() };
+        UpdateLaser(extraLazerConditions);
     }
 
 
@@ -95,8 +117,24 @@ public class ViveHandInteractionLaserPointer : MonoBehaviour
     // ---------- ---------- ---------- ---------- ----------
     public bool CheckInput()
     {
-        m_hand.controller.TriggerHapticPulse();
+        //m_hand.controller.TriggerHapticPulse();
         return (m_hand.GetStandardInteractionButtonDown());
+    }
+
+
+    // ---------- ---------- ---------- ---------- ----------
+    public bool CheckLongInput()
+    {
+        //m_hand.controller.TriggerHapticPulse();
+        return (m_hand.GetStandardInteractionButton());
+    }
+
+
+    // ---------- ---------- ---------- ---------- ----------
+    public bool CheckOffInput()
+    {
+        //m_hand.controller.TriggerHapticPulse();
+        return (m_hand.GetStandardInteractionButtonUp());
     }
 
 
@@ -131,9 +169,19 @@ public class ViveHandInteractionLaserPointer : MonoBehaviour
 
 
     // ---------- ---------- ---------- ---------- ----------
-    public void UpdateLaser()
+    public void UpdateLaser(bool[] extraConditions)
     {
-        m_lineRenderer.enabled = m_controllerConnected;
+        bool extraCondition = true;
+        foreach(bool condition in extraConditions)
+        {
+            if (condition == false)
+            {
+                extraCondition = false;
+                break;
+            }
+        }
+
+        m_lineRenderer.enabled = m_controllerConnected && extraCondition;
         m_lineRenderer.SetPositions( new Vector3[] {m_hand.transform.position, m_endLinePos});
     }
 
