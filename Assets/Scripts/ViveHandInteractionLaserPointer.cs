@@ -16,7 +16,7 @@ public class ViveHandInteractionLaserPointer : MonoBehaviour
 
     private bool m_controllerConnected
     {
-        get { return m_hand.controller.hasTracking; }
+        get { return m_hand.controller != null && m_hand.controller.hasTracking; }
     }
 
     // ---------- ---------- ---------- ---------- ----------

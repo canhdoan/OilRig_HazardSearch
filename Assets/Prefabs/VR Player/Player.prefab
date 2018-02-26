@@ -249,8 +249,6 @@ GameObject:
   - component: {fileID: 4608404373834668}
   - component: {fileID: 20909630192264040}
   - component: {fileID: 114952034254693218}
-  - component: {fileID: 92031506236586052}
-  - component: {fileID: 124496514171340530}
   - component: {fileID: 114501748840316342}
   - component: {fileID: 114779612870345018}
   m_Layer: 0
@@ -1016,13 +1014,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1517481907771608}
   m_Enabled: 1
---- !u!92 &92031506236586052
-Behaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1643533759064340}
-  m_Enabled: 0
 --- !u!92 &92613682544368894
 Behaviour:
   m_ObjectHideFlags: 1
@@ -1195,7 +1186,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1643533759064340}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
@@ -1594,13 +1585,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!124 &124496514171340530
-Behaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1643533759064340}
-  m_Enabled: 0
 --- !u!132 &132394153049154174
 GUIText:
   m_ObjectHideFlags: 1
