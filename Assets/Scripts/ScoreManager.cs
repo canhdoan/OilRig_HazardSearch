@@ -22,10 +22,10 @@ public class ScoreManager : MonoBehaviour
     {
         if (instance != this) Destroy(gameObject);
     }
-#endregion
+    #endregion
 
 
-#region Attributes
+    #region Attributes
 
     private int currentScore;
 
