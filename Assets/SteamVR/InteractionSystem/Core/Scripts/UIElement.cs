@@ -64,6 +64,11 @@ namespace Valve.VR.InteractionSystem
 		{
 			onHandClick.Invoke( currentHand );
 		}
+
+        public Hand GetCurrentHand()
+        {
+            return currentHand;
+        }
 	}
 
 #if UNITY_EDITOR

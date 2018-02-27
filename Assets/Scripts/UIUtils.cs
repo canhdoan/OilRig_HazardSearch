@@ -14,7 +14,7 @@ public class UIUtils : MonoBehaviour
 	void Update ()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-            GoToScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+            ReloadCurrentScene();
     }
 
     public void GoToScene(int index)
@@ -25,5 +25,10 @@ public class UIUtils : MonoBehaviour
     public void GoToScene(string name)
     {
         UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(name);
+    }
+
+    public void ReloadCurrentScene()
+    {
+        GoToScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }
