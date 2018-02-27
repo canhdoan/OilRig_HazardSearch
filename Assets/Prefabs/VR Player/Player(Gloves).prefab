@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 114665290079130670}
   - component: {fileID: 114048706993663896}
   - component: {fileID: 114417576542781352}
+  - component: {fileID: 65095147694865502}
   m_Layer: 26
   m_Name: ButtonReset
   m_TagString: Untagged
@@ -396,7 +397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1668942499831406
 GameObject:
   m_ObjectHideFlags: 1
@@ -1349,6 +1350,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65095147694865502
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1161098449417060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 250, y: 100, z: 0.01}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!81 &81954217488681408
 AudioListener:
   m_ObjectHideFlags: 1
