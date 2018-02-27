@@ -110,6 +110,8 @@ namespace Valve.VR.InteractionSystem
 
 		SteamVR_Events.Action chaperoneInfoInitializedAction;
 
+        public bool enableTutorial;
+
 		// Events
 
 		public static SteamVR_Events.Event< float > ChangeScene = new SteamVR_Events.Event< float >();
@@ -182,7 +184,8 @@ namespace Valve.VR.InteractionSystem
 
 			CheckForSpawnPoint();
 
-			Invoke( "ShowTeleportHint", 5.0f );
+            if(enableTutorial)
+			    Invoke( "ShowTeleportHint", 5.0f );
 		}
 
 
