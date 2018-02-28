@@ -339,6 +339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4597896681942272}
   - component: {fileID: 95613210126531418}
+  - component: {fileID: 114124702677551778}
   m_Layer: 0
   m_Name: Glove(Left)
   m_TagString: Untagged
@@ -720,7 +721,7 @@ Animator:
   m_GameObject: {fileID: 1905606119007362}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 764efd512043dc8488180da61ef6f57d, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 066a28d3dcee31d4ea8b00774ff790f2, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -728,6 +729,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114124702677551778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1905606119007362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 506161db52d348b4f96ab9ba95ab5d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114258854116493466
 MonoBehaviour:
   m_ObjectHideFlags: 1
